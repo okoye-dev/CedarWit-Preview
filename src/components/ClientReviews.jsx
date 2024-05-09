@@ -16,7 +16,7 @@ const ClientReviews = () => {
   return (
     <Transition>
       <section className="flex justify-center items-center overflow-hidden rounded-3xl relative bg-white mx-2 px-2 w-screen">
-        <h1 className="text-[#3F4525] font-bold text-[1.375rem] ipad:text-2xl lg:text-3xl absolute top-10 lg:top-24 md:top-6 z-10">
+        <h1 className="text-[#3F4525] font-bold text-[1.375rem] ipad:text-2xl lg:text-3xl absolute top-8 lg:top-24 md:top-6 z-10">
           What Our Clients Say
         </h1>
 
