@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --Herobg-image: url("./assets/BackgroundImg.svg");
+  --Aboutbg-image: url("./assets/AboutBackgroundImage.svg");
+  --Contactbg-image: url("./assets/ContactBg.svg");
+  --HeroMobilebg-image: url("./assets/mobilebg.svg");
+  --AboutMobilebg-image: url("./assets/aboutmobilebg.svg");
+  --ContactMobilebg-image: url("./assets/ContactBg.svg");
+}
+
+* {
+  font-family: "Raleway", serif;
+  scroll-behavior: smooth;
+}
+.background-image {
+  background-image: var(--Herobg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.aboutBackground-image {
+  background-image: var(--Aboutbg-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 64%;
+}
+
+.contactBackground-image {
+  background-image: var(--Contactbg-image);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: 120%;
+}
+.scrolled {
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Hero slider animations */
+.animateSlide {
+  animation: slide 3.9s ease-in-out infinite;
+}
+@keyframes slide {
+  from {
+    top: 12rem;
+  }
+  5% {
+    top: 0;
+  }
+  10% {
+    top: -1.5rem;
+  }
+  14% {
+    top: 0;
+  }
+  95% {
+    top: 0;
+  }
+  to {
+    top: 12rem;
+  }
+}
+
+@media (max-width: 799px) {
+  .background-image,
+  .aboutBackground-image,
+  .contactBackground-image {
+    background-image: none;
+  }
+
+  .closed {
+    transition: 0.5s ease-in-out;
+    max-height: 4.325rem;
+    overflow: hidden;
+  }
+
+  .open {
+    transition: 0.5s ease-in-out;
+    max-height: 31.25rem;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: 850px) and(max-width: 1024px) {
+  .background-image {
+    background-image: var(--Herobg-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: fit;
+    background-position: center;
+  }
+  .aboutBackground-image {
+    background-image: var(--Aboutbg-image);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: fit;
+    background-position-y: top;
+  }
+  .contactBackground-image {
+    background-image: var(--Contactbg-image);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 95%;
+  }
+}
