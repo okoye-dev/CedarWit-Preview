@@ -33,7 +33,7 @@
   background-image: var(--Contactbg-image);
   background-repeat: no-repeat;
   background-size: contain;
-  background-position-y: 120%;
+  background-position-y: 100%;
 }
 .scrolled {
   background-color: white;
@@ -66,12 +66,6 @@
 }
 
 @media (max-width: 799px) {
-  .background-image,
-  .aboutBackground-image,
-  .contactBackground-image {
-    background-image: none;
-  }
-
   .closed {
     transition: 0.5s ease-in-out;
     max-height: 4.325rem;
